@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
 import '../CSS/login.css';
 import Footer from '../layout/footer';
+import { url } from "gravatar";
 
 const Login = ({ login, isAuthenticated }) => {
   //intializing a state
@@ -33,6 +34,7 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <div className="main">
+      <span></span>
     <div className="login">
       <Link to="/">
       </Link>
@@ -63,7 +65,6 @@ const Login = ({ login, isAuthenticated }) => {
         </p>
       </div>
     </div>
-    {/* <Footer/> */}
     </div>
   )
 };
