@@ -28,7 +28,6 @@ function footer(){
 						<Link to="/dashboard">Sell Under WebDevPool</Link>
 						<Link to="/dashboard">Because on Afflicate</Link>
 						<Link to="/dashboard">Fulfilment by WebDevPool</Link>
-						{/* <a href="/About">Advertise Your Products</a> */}
 						<Link href="/About">Advertise Pay on Merchants</Link>
 					</div>
 					<div className='footer_body1'>
