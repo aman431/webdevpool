@@ -34,6 +34,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       register({ name, email, password });
       emailjs.sendForm('service_z5x24cu', 'template_4jidrme', e.target, 'user_RW0h4aDDnGKOvwFJ4ePmy')
       .then((result) => {
+          alert("Successfully Register!! Please Check your Email");
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
