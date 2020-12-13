@@ -7,9 +7,9 @@ html body{
     margin-right: -40px;
     /* margin-top: 50px; */
     height: 100vh;
-    background-image: url('../../img/ball.jpg');
+    /* background-image: url('../../img/ball.jpg');
     background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; */
 }
 .login{
     margin-top: 50px;

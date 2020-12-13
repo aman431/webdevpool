@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
 import '../CSS/login.css';
-import Footer from '../layout/footer';
+// import Footer from '../layout/footer';
 import { url } from "gravatar";
 
 const Login = ({ login, isAuthenticated }) => {
@@ -13,7 +13,7 @@ const Login = ({ login, isAuthenticated }) => {
     email: "",
     password: "",
   });
-
+  const [isLoginAuth, setisLoginAuth] = useState(false);
   const { email, password } = formData;
 
   // making a controlled component
@@ -25,12 +25,25 @@ const Login = ({ login, isAuthenticated }) => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    login(email, password);
+    login(email, password)
+    setisLoginAuth(true);
+    // if(isAuthenticated){
+    //   onDashboard()
+    // } else {
+    //   onsame()
+    // }
   };
 
-  if (isAuthenticated) {
+  if (isAuthenticated && isLoginAuth) {
     return <Redirect to="/dashboard" />;
   }
+
+  // const onDashboard = () => {
+  //   return <Redirect to='/dashboard'></Redirect>
+  // };
+  // const onsame = () => {
+  //   return <Redirect to='/login'></Redirect>
+  // };
 
   return (
     <div className="main">
@@ -38,7 +51,7 @@ const Login = ({ login, isAuthenticated }) => {
     <div className="login">
       <Link to="/">
       </Link>
-      <div className="login-form">
+      <div className="login-form" style={{border: '1px solid darkgrey'}}>
         <h1>Sign in</h1>
         <form onSubmit={(e) => onSubmit(e)}>
           <h5 className="text-size">E-mail</h5>
@@ -63,6 +76,7 @@ const Login = ({ login, isAuthenticated }) => {
         <b>Don't have an account?</b> 
         <Link style={{ textAlign: "center", fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/register">Sign Up</Link>
         </p>
+        {/* {isAuthenticated ? onDashboard : onsame} */}
       </div>
     </div>
     </div>

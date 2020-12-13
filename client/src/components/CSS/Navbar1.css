@@ -1,7 +1,7 @@
 
 .menu-bars{
     position: relative;
-    top:6px;
+    top:0px;
 	font-size: 1.5rem;
 	color: white;
 	background: none;
@@ -42,7 +42,7 @@ span{
 	margin-left: 350px;
 }
 .top-header{
-	padding: 15px;
+	padding-left: 10px;
 	color: white;
     text-align: left;
 	padding-bottom: 35px;
@@ -80,7 +80,7 @@ span{
 	border-radius: 4px;
 }
 .arrow {
-    display: flex;
+	display: flex;
     flex-direction: row;
     justify-content: space-between;
 }

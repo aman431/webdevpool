@@ -5,7 +5,9 @@ import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
 import '../CSS/register.css';
-import emailjs from 'emailjs-com';
+import emailjs, { send } from 'emailjs-com';
+// import Modal from 'react-modal';
+import Modal1 from './modal';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -14,6 +16,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     password: "",
     password2: "",
   });
+const [modalIsOpen, setmodalIsOpen] = useState(false);
 
   const { name, email, password, password2 } = formData;
 
@@ -24,31 +27,69 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
        [e.target.name]: e.target.value 
       });
 
-//emailjs.send("service_z5x24cu","template_4jidrme");
-
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
       setAlert("Passwords do not match", "danger");
     } else {
-      register({ name, email, password });
-      emailjs.sendForm('service_z5x24cu', 'template_4jidrme', e.target, 'user_RW0h4aDDnGKOvwFJ4ePmy')
-      .then((result) => {
-          alert("Successfully Register!! Please Check your Email");
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+      if(register({ name, email, password })){
+        setmodalIsOpen(true)
+        emailjs.sendForm('service_z5x24cu', 'template_4jidrme', e.target, 'user_RW0h4aDDnGKOvwFJ4ePmy')
+        .then((result) => {
+            setmodalIsOpen(true);
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+      }
+      // setmodalIsOpen(true)
+      // emailjs.sendForm('service_z5x24cu', 'template_4jidrme', e.target, 'user_RW0h4aDDnGKOvwFJ4ePmy')
+      // .then((result) => {
+      //     setmodalIsOpen(true);
+      //     console.log(result.text);
+      // }, (error) => {
+      //     console.log(error.text);
+      // });
     }
   };
-
-  if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+  const addModalClose = () => {
+    setmodalIsOpen(false);
   }
+
+  const sendLink = (
+    <Modal1
+        name={formData.name}
+        show={modalIsOpen}
+        onHide={addModalClose}
+      />
+  );
+  const onsame = (
+    <Redirect to='/register'></Redirect>
+  );
+//  if(isAuthenticated){
+//    console.log('Hello world')
+//     return(
+//       <Modal1
+//         name={formData.name}
+//         show={modalIsOpen}
+//         onHide={addModalClose}
+//       />
+//     )
+//   }
+
+  // const addModalClose = () => {
+  //   setmodalIsOpen(false);
+  // }
+
   return (
     <div className="main12">
     <div className='register'>
-      <div className="register-form">
+      <div className="register-form" style={{border: '1px solid darkgrey'}}>
+      {/* <Modal1
+        name = {formData.name}
+        show={modalIsOpen}
+        onHide = {addModalClose}
+      /> */}
         <h1>Create Account</h1>
         <form className="form" onSubmit={onSubmit}>
           <h5 className="text-size">Your name</h5>
@@ -84,8 +125,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           />
           <input type="submit" className="signIn" value="Register" />
           <p>
-            Already have an account? <Link style={{ fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/login">Sign in</Link>
+            {/* Already have an account? <Link style={{ fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/login">Sign in</Link> */}
           </p>
+          <div>{isAuthenticated ? sendLink : onsame}</div>
         </form>
       </div>
     </div>

@@ -1,12 +1,12 @@
 .main12 {
 	margin-left: -40px;
-    margin-right: -40px;
+	margin-right: -40px;
     /* margin-top: 50px; */
     height: 100vh;
-	background-image: url('../../img/ball.jpg');
+	/* background-image: url('../../img/ball.jpg');
     background-repeat: no-repeat;
-	background-size: cover;
-}
+	background-size: cover; */
+} 
 .amazon-logo {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -75,4 +75,19 @@ select {
 
 .text-size {
 	font-size: 1.02rem;
+}
+.modal1{
+	margin-top: 50px;
+	height: 400px;
+	width: 500px;
+}
+element.style {
+    /* position: absolute; */
+    inset: 40px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
 }

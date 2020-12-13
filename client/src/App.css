@@ -2,13 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-:root {
+/* :root {
 	--primary-color: #000000;
 	--dark-color: #343a40;
 	--light-color: #f4f4f4;
 	--danger-color: #850512;
 	--success-color: #167e2e;
-}
+} */
 
 *{
 	box-sizing: border-box;
@@ -20,13 +20,13 @@ body {
 	margin: 0px ;
 	padding: 0px ;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1rem;
+	/* font-size: 1rem; */
 	line-height: 1.6;
-	background-color: lightgrey;
-	/* color: #333; */
-	/* background-image: url("./img/ball.jpg"); */
-	/* opacity: 80%; */
-	/* background-repeat: no-repeat;
+	background-color: lightgray;
+	/* color: #333;
+	background-image: url("./img/ball.jpg");
+	opacity: 80%;
+	background-repeat: no-repeat;
 	background-size: cover; */
 }
 

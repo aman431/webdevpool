@@ -31,7 +31,7 @@ const Dashboard = ({
         <div className="dashboard_header">
           <h1 style={{paddingTop:"60px",fontSize:"40px",color:"white",letterSpacing:"5px"}}>Welcome to WebDevPool</h1>
         </div>
-      <div className="profile bg-light" style={{backgroundColor:"rgba(80,70,70)",border:"none", display:"flex",flexDirection:"row",justifyContent:"space-around",position:"relative",top:"-200px",margin:"50px" }}>
+      <div className="profile bg-light"  style={{backgroundColor:"white",border:"none", display:"flex",flexDirection:"row",justifyContent:"space-around",position:"relative",top:"-200px",margin:"50px"}} >
         <img src={user.avatar} alt="" className="round-img" />
         <p className="large text-primary" style={{color:"darkOrange",letterSpacing:"3px"}}>{user && user.name}</p>
       </div>
@@ -53,7 +53,7 @@ const Dashboard = ({
         ) : (
             <Fragment>
               <p>You have not yet setup a profile, please add some info</p>
-              <Link to="/create-profile" style={{backgroundColor:"darkorange",borderRadius:"5px"}}className="btn btn-primary my-1">
+              <Link to="/create-profile" style={{backgroundColor:"darkorange",borderRadius:"5px",border:'none'}} className="btn btn-primary my-1">
                 Create Profile
               </Link>
             </Fragment>
