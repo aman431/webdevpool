@@ -23,13 +23,13 @@ class Modal1 extends Component {
                     <Modal.Body>
                         <h4>Hello {this.props.name}.</h4>
                         <p>
-                        Congratulations, you have Successfully created a WEbDevPool account.<br />
-                        Please check the Email for further Process.<br />
-                        Thank you                        
+                        Congratulations, you have Successfully created a WebDevPool account.<br /><br />
+                        Please check the Email or directly go for Signin.<br />
+                        Thank you !                        
                         </p>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="red" onClick={this.props.onHide}>Close</Button>
+                        <Button style={{backgroundColor:'red',color:'white'}} variant="red" onClick={this.props.onHide}>Close</Button>
                     </Modal.Footer>
                 </Modal>
         )
