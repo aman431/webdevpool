@@ -6,7 +6,7 @@ import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
 import '../CSS/register.css';
 import emailjs, { send } from 'emailjs-com';
-// import Modal from 'react-modal';
+import Footer from '../layout/footer';
 import Modal1 from './modal';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
@@ -125,13 +125,13 @@ const [modalIsOpen, setmodalIsOpen] = useState(false);
           />
           <input type="submit" className="signIn" value="Register" />
           <p>
-            {/* Already have an account? <Link style={{ fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/login">Sign in</Link> */}
+            Already have an account? <Link style={{ fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/login">Sign in</Link>
           </p>
           <div>{isAuthenticated ? sendLink : onsame}</div>
         </form>
       </div>
     </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

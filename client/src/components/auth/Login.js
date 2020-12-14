@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
 import '../CSS/login.css';
-// import Footer from '../layout/footer';
+import Footer from '../layout/footer';
 import { url } from "gravatar";
 
 const Login = ({ login, isAuthenticated }) => {
@@ -79,6 +79,7 @@ const Login = ({ login, isAuthenticated }) => {
         {/* {isAuthenticated ? onDashboard : onsame} */}
       </div>
     </div>
+    <Footer />
     </div>
   )
 };
