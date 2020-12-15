@@ -66,20 +66,10 @@ const [modalIsOpen, setmodalIsOpen] = useState(false);
   const onsame = (
     <Redirect to='/register'></Redirect>
   );
-//  if(isAuthenticated){
-//    console.log('Hello world')
-//     return(
-//       <Modal1
-//         name={formData.name}
-//         show={modalIsOpen}
-//         onHide={addModalClose}
-//       />
-//     )
-//   }
 
-  // const addModalClose = () => {
-  //   setmodalIsOpen(false);
-  // }
+ if(isAuthenticated){
+    return <Redirect to='/dashboard'></Redirect> 
+  }
 
   return (
     <div className="main12">
@@ -127,7 +117,7 @@ const [modalIsOpen, setmodalIsOpen] = useState(false);
           <p>
             Already have an account? <Link style={{ fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/login">Sign in</Link>
           </p>
-          <div>{isAuthenticated ? sendLink : onsame}</div>
+          {/* <div>{isAuthenticated ? sendLink : onsame}</div> */}
         </form>
       </div>
     </div>
