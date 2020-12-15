@@ -30,6 +30,7 @@ html body{
 .login-form > form > input{
     height: 30px;
     margin-bottom: 10px;
+    outline-style: none;
     width: 98%;
 }
 
