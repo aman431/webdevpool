@@ -36,14 +36,14 @@ const Dashboard = ({
         <p className="large text-primary" style={{color:"darkOrange",letterSpacing:"3px"}}>{user && user.name}</p>
       </div>
       <div style={{position:'relative', top:"-200px"}}>
-        <p className="lead">
+        <p className="lead" style={{textAlign:'center'}}>
           <i className="fas fa-user-secret" style={{color: "Gray"}} /> Welcome {user && user.name}
         </p>
         {profile !== null ? (
           <Fragment>
             <DashboardActions />
             <Experience experience={profile.experience} />
-            <Education education={profile.education} />
+            <Education education={profile.education}/>
             <div className="my-2">
               <button className="btn btn-danger" style={{border:"none",backgroundColor:"DarkOrange", borderRadius:"5px"}}onClick={() => deleteAccount()}>
                 Delete My Account
