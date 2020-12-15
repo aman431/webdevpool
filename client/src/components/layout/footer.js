@@ -15,14 +15,14 @@ function footer(){
 						<i className="fab fa-youtube fa-2x" />
 						<i className="fab fa-linkedin fa-2x" />
 					</div>
-					<div className='footer_body1'>
+					{/* <div className='footer_body1'>
 						<Link to="/dashboard">Help</Link>
 						<Link to="/dashboard">site index</Link>
 						<Link to="/dashboard">Covide-19 and WebDevPool</Link>
 						<Link to="/dasboard">Your Account</Link>
 						<Link to="/dashboard">Return Center</Link>
 						<Link to="/dashboard">WebDevPool Developer</Link>
-					</div>
+					</div> */}
 					<div className='footer_body1'>
 						<Link to="/dashboard">Press Room</Link>
 						<Link to="/dashboard">Advertising
@@ -33,9 +33,9 @@ function footer(){
 						<Link href="/About">Privacy Policy</Link>
 						<Link href="/About">Interest-Based Ads</Link>
 					</div>
-					<div className='footer_body1'>
+					{/* <div className='footer_body1'>
 						<Link to="/dashboard">an WebDevPool Website</Link>
-					</div>
+					</div> */}
 					<div className='footer_bottom'>
 						<Link to="/dashboard">© 2019-2020 by WebDevPool, Inc.</Link>
 					</div>

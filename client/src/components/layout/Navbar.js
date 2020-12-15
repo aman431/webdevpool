@@ -64,11 +64,26 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   const authLinks = (
     <ul>
       <li>
+        <Link to="/dashboard">Dashboard</Link>
+      </li>
+      <li>
+        <Link to="/profiles">Profile</Link>
+      </li>
+      <li>
+        <Link to="/posts">Posts Feed</Link>
+      </li>
+      <li>
         <a onClick={logout} href="#!" style={{textDecoration:'none'}}>
           <i className="fas fa-power-off" />{" "}
           <span className="hide-sm">Logout</span>
         </a>
       </li>
+      {/* <li>
+        <a onClick={logout} href="#!" style={{textDecoration:'none'}}>
+          <i className="fas fa-power-off" />{" "}
+          <span className="hide-sm">Logout</span>
+        </a>
+      </li> */}
     </ul>
   );
 
@@ -83,20 +98,20 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
       </li>
     </ul>
   );
-  const leftNavBar = () => {
-    if(!loading && isAuthenticated){
-      return(
-        <Fragment>
-          {Navbar1()}
-        </Fragment>
-      )
-    }
-  }
+  // const leftNavBar = () => {
+  //   if(!loading && isAuthenticated){
+  //     return(
+  //       <Fragment>
+  //         {Navbar1()}
+  //       </Fragment>
+  //     )
+  //   }
+  // }
   return (
     <div>
       <nav className="navbar bg-dark" style={{background:"DodgerBlue",height:'50px'}}>
         <p style={{display:'flex',flexDirection:'row'}}>
-          {leftNavBar()}
+          {/* {leftNavBar()} */}
           {/* {Navbar1()} */}
           <Link to="/" style={{textDecoration:'none'}}>
             <i className="fas fa-users" /> WebDevPool
