@@ -73,9 +73,9 @@ const EditProfile = ({
 
   return (
     <Fragment>
-      <p className="large text-primary">Edit Your Profile</p>
-      <p className="lead" style={{fontSize:"18px"}}>
-        <i className="fas fa-user-secret" style={{color:"brown"}}/> Add some changes to your profile
+      <p className="large text-primary"  style={{textAlign:'center'}}>Edit Your Profile</p>
+      <p className="lead" style={{fontSize:"18px",textAlign:'center'}}>
+        <i className="fas fa-user-secret" style={{color:"grey"}}/> Add some changes to your profile
       </p>
       {/* <small>* = required field</small> */}
       <form className="form" onSubmit={(e) => onSubmit(e)}>
@@ -169,7 +169,7 @@ const EditProfile = ({
             name="bio"
             value={bio}
             onChange={(e) => onChange(e)}
-            style={{fontSize:"15px",borderRadius:"4px",height:"45px"}}
+            style={{fontSize:"15px",borderRadius:"4px",height:"100px"}}
           />
           <small className="form-text">Tell us a little about yourself</small>
         </div>

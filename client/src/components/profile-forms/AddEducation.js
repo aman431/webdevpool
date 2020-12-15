@@ -32,8 +32,8 @@ const AddEducation = ({ addEducation, history }) => {
 
   return (
     <Fragment>
-      <p className="large text-primary">Add Your Education</p>
-      <p className="lead"  style={{fontSize:"18px"}}>
+      <p className="large text-primary" style={{textAlign:'center'}}>Add Your Education</p>
+      <p className="lead"  style={{fontSize:"18px", textAlign:'center'}}>
         <i className="fas fa-code-branch" /> Add any school or bootcamp that you
         have attended
       </p>

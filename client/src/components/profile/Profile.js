@@ -78,7 +78,7 @@ const Profile = ({
           </div>
         </Fragment>
       )}
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   );
 };

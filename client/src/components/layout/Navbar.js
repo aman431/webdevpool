@@ -109,7 +109,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   // }
   return (
     <div>
-      <nav className="navbar bg-dark" style={{background:"DodgerBlue",height:'55px'}}>
+      <nav className="navbar bg-dark" style={{height:'55px'}}>
         <p style={{display:'flex',flexDirection:'row'}}>
           {/* {leftNavBar()} */}
           {/* {Navbar1()} */}

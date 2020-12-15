@@ -32,7 +32,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
             </div>
           </Fragment>
         )}
-        <Footer />
+        {/* <Footer /> */}
     </Fragment>
   );
 };

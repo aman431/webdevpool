@@ -16,8 +16,8 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <Spinner />
   ) : (
       <Fragment>
-        <h1 className="large text-primary">Posts</h1>
-        <p className="lead">
+        <h1 className="large text-primary" style={{textAlign:'center'}}>Posts</h1>
+        <p className="lead" style={{textAlign:'center'}}>
           <i className="fas fa-user-secret" style={{color:"grey"}}/> Welcome to the community
       </p>
         <PostForm />
@@ -26,7 +26,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
             <PostItem key={post._id} post={post} />
           ))}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </Fragment>
     );
 };

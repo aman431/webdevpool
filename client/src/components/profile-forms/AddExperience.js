@@ -23,8 +23,8 @@ const AddExperience = ({ addExperience, history }) => {
 
   return (
     <Fragment>
-      <p className="large text-primary">Add An Experience</p>
-      <p className="lead" style={{fontSize:"18px"}}>
+      <p className="large text-primary" style={{textAlign:'center'}}>Add An Experience</p>
+      <p className="lead" style={{fontSize:"18px", textAlign:'center'}}>
         <i className="fas fa-code-branch" /> Add any developer/programming
         positions that you have had in the past
       </p>
@@ -35,7 +35,7 @@ const AddExperience = ({ addExperience, history }) => {
           e.preventDefault();
           addExperience(formData, history);
         }}
-        style={{marginRight:"120px",marginTop:"60px"}}
+        style={{marginTop:"60px"}}
       >
         <div className="form-group">
           <input
@@ -116,7 +116,7 @@ const AddExperience = ({ addExperience, history }) => {
           Go Back
         </Link>
       </form>
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   );
 };

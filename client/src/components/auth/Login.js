@@ -79,7 +79,7 @@ const Login = ({ login, isAuthenticated }) => {
         {/* {isAuthenticated ? onDashboard : onsame} */}
       </div>
     </div>
-    <Footer />
+    {/* <Footer /> */}
     </div>
   )
 };

@@ -28,7 +28,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
             <CommentItem key={comment._id} comment={comment} postId={post._id} />
           ))}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </Fragment>
     );
 };

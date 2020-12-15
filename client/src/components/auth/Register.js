@@ -131,7 +131,7 @@ const [modalIsOpen, setmodalIsOpen] = useState(false);
         </form>
       </div>
     </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

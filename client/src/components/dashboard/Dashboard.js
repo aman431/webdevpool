@@ -35,7 +35,7 @@ const Dashboard = ({
         <img src={user.avatar} alt="" className="round-img" />
         <p className="large text-primary" style={{color:"darkOrange",letterSpacing:"3px"}}>{user && user.name}</p>
       </div>
-      <div>
+      <div style={{position:'relative', top:"-200px"}}>
         <p className="lead">
           <i className="fas fa-user-secret" style={{color: "Gray"}} /> Welcome {user && user.name}
         </p>
@@ -62,7 +62,7 @@ const Dashboard = ({
           {/* <Footer/> */}
       </Fragment>
       {/* </div> */}
-      <Footer/>
+      {/* <Footer/> */}
       </div>
     );
 };
