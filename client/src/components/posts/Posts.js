@@ -26,7 +26,6 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
             <PostItem key={post._id} post={post} />
           ))}
         </div>
-        {/* <Footer /> */}
       </Fragment>
     );
 };

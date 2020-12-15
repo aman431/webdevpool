@@ -255,7 +255,7 @@ const EditProfile = ({
           Go Back
         </Link>
       </form>
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   );
 };

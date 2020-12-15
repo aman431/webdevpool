@@ -119,7 +119,7 @@ const AddEducation = ({ addEducation, history }) => {
           Go Back
         </Link>
       </form>
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   );
 };
