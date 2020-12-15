@@ -10,15 +10,15 @@
 	--success-color: #167e2e;
 } */
 
-*{
+* {
 	box-sizing: border-box;
-	margin: 0px ;
-	padding: 0px ;
+	margin: 0px;
+	padding: 0px;
 }
 
 body {
-	margin: 0px ;
-	padding: 0px ;
+	margin: 0px;
+	padding: 0px;
 	font-family: 'Montserrat', sans-serif;
 	/* font-size: 1rem; */
 	line-height: 1.6;
@@ -749,3 +749,12 @@ select {
 .text-size {
 	font-size: 1.02rem;
 } */
+
+video {
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
