@@ -64,13 +64,13 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/dashboard" style={{textDecoration:'none'}}>Dashboard</Link>
       </li>
       <li>
-        <Link to="/profiles">Profile</Link>
+        <Link to="/profiles" style={{textDecoration:'none'}}>Profiles</Link>
       </li>
       <li>
-        <Link to="/posts">Posts Feed</Link>
+        <Link to="/posts" style={{textDecoration:'none'}}>Posts Feed</Link>
       </li>
       <li>
         <a onClick={logout} href="#!" style={{textDecoration:'none'}}>
@@ -109,7 +109,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   // }
   return (
     <div>
-      <nav className="navbar bg-dark" style={{background:"DodgerBlue",height:'50px'}}>
+      <nav className="navbar bg-dark" style={{background:"DodgerBlue",height:'55px'}}>
         <p style={{display:'flex',flexDirection:'row'}}>
           {/* {leftNavBar()} */}
           {/* {Navbar1()} */}
