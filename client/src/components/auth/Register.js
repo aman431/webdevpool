@@ -123,7 +123,7 @@ const [modalIsOpen, setmodalIsOpen] = useState(false);
             value={password2}
             onChange={onChange}
           />
-          <input type="submit" className="signIn" value="Register" />
+          <input type="submit" className="signIn" value="Register" style={{backgroundColor:'darkorange',color:'white'}}/>
           <p>
             Already have an account? <Link style={{ fontSize: "1.1rem", fontWeight: "bold", textDecoration: "underline" }} to="/login">Sign in</Link>
           </p>

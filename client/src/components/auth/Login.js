@@ -70,7 +70,7 @@ const Login = ({ login, isAuthenticated }) => {
             onChange={(e) => onChange(e)}
             minLength="6"
           />
-          <input type="submit" className="signIn" value="Login" />
+          <input type="submit" style={{backgroundColor:'darkorange',color:'white'}} className="signIn" value="Login" />
         </form>
         <p style={{ textAlign: "center", fontWeight: "bold" }} className="my-1">
         <b>Don't have an account?</b> 

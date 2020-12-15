@@ -357,6 +357,7 @@ button {
 	top: 0;
 	border-bottom: solid 1px var(--primary-color);
 	opacity: 0.9;
+	background-color: black;
 }
 
 .navbar ul {
@@ -757,4 +758,8 @@ video {
 	position: fixed;
 	top: 0;
 	left: 0;
+}
+.navstyle {
+	background-color: red;
+	color:white;
 }
