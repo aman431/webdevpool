@@ -34,21 +34,35 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
               <h5 className="top-header" style={{letterSpacing:'0px'}}>Welcome {user && user.name}</h5>
               <div className="border"></div>
               <div className="nav-text">
-                <li>
+                {/* <li>
                   <Link to="/dashboard" className='arrow' style={{color:'white',textDecoration:'none'}}>Dashboard
                     <IoIcons.IoIosArrowForward style={{color:'white'}}/> 
                   </Link>
-                </li>
+                </li> */}
                 <li>
-                  <Link to="/profiles" className='arrow' style={{color:'white',textDecoration:'none'}}>Profiles
-                  <IoIcons.IoIosArrowForward style={{color:'white'}} />
+                  <Link to="/edit-profile" className="arrow">Edit Profile
+                    <IoIcons.IoIosArrowForward style={{color:'white'}} />
                   </Link>
                 </li>
                 <li>
+                  <Link to="/add-experience" className="arrow">Add Experience
+                    <IoIcons.IoIosArrowForward style={{color:'white'}} />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/add-education" className="arrow">Add Education
+                    <IoIcons.IoIosArrowForward style={{color:'white'}} />
+                  </Link>
+                </li>
+                  {/* <Link to="/profiles" className='arrow' style={{color:'white',textDecoration:'none'}}>Profiles
+                  <IoIcons.IoIosArrowForward style={{color:'white'}} />
+                  </Link> */}
+                {/* </li> */}
+                {/* <li>
                   <Link to="/posts" className='arrow' style={{color:'white',textDecoration:'none'}}>Posts Feed
                   <IoIcons.IoIosArrowForward style={{color:'white'}}/>
                   </Link>
-                </li>
+                </li> */}
                 {/* <li className='arrow'>
                   <Link to="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
                   <IoIcons.IoIosArrowForward style={{color:'white'}}/>
@@ -98,20 +112,20 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
       </li>
     </ul>
   );
-  // const leftNavBar = () => {
-  //   if(!loading && isAuthenticated){
-  //     return(
-  //       <Fragment>
-  //         {Navbar1()}
-  //       </Fragment>
-  //     )
-  //   }
-  // }
+  const leftNavBar = () => {
+    if(!loading && isAuthenticated){
+      return(
+        <Fragment>
+          {Navbar1()}
+        </Fragment>
+      )
+    }
+  }
   return (
     <div>
       <nav className="navbar" style={{height:'55px'}}>
         <p style={{display:'flex',flexDirection:'row'}}>
-          {/* {leftNavBar()} */}
+          {leftNavBar()}
           {/* {Navbar1()} */}
           <Link to="/" style={{textDecoration:'none'}}>
             <i className="fas fa-users" /> WebDevPool
